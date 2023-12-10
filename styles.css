@@ -1,11 +1,14 @@
 :root {
   --white: #fff;
-  --red: #f32d2c;
+  --black: #242424;
+  --red: #f32c2c;
   --pink: #e54b4b;
-  --lightGray: #5b5b5b;
+  --lightGray: #5d5d5d;
+  --veryLightGray: #f5f5f5;
   --darkBlue: #172f47;
   --orange: #fdb139;
-  --lightBlue:#3f5165;
+  --lightBlue: #3f5165;
+  --veryLightBlue: #4a686a;
 }
 * {
   box-sizing: border-box;
@@ -40,11 +43,6 @@ nav {
   margin: auto;
 }
 
-.logoContainer,
-.navListContainer {
-  margin: 0 10px;
-}
-
 .navList {
   display: flex;
   justify-content: space-evenly;
@@ -70,14 +68,13 @@ li > a {
 .heroSection {
   width: 90%;
   margin: 150px auto 80px auto;
-  /* background-color: var(--red); */
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-h1{
-  font-family: 'Roboto', sans-serif;
+h1 {
+  font-family: "Roboto", sans-serif;
   color: #242424;
   font-size: 70px;
   line-height: 80px;
@@ -89,7 +86,7 @@ h1 > span {
   color: var(--orange);
 }
 
-.heroText{
+.heroText {
   color: var(--lightGray);
   line-height: 32px;
   font-size: 1.1rem;
@@ -97,34 +94,239 @@ h1 > span {
   margin-bottom: 40px;
 }
 
-.ctaBtn{
+.ctaBtn {
   background-color: var(--red);
-  font-size: .9rem;
+  font-size: 0.9rem;
   padding: 12px 30px;
   font-weight: 400;
   color: var(--white);
 }
 
-.banner{
+.banner {
   position: absolute;
   right: 10px;
-  bottom:-120px;
+  bottom: -120px;
 }
 
 /* Counter Area */
-.counterSectionParent{
-  height: 180px;
-  background: url("./Images//ppp.jpg");
-  background-color: var(--lightBlue);
+.counterSectionParent {
+  height: 200px;
+  background: url("./Assets//Images/ppp.jpg");
   background-size: cover;
   background-position: center;
-  margin: 250px 0;
+  margin: 250px 0 100px 0;
 }
 
-.counterSection{
+.counterSection {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(63, 81, 101, 0.8);
+}
+
+.counterSectionText {
   width: 90%;
   height: 100%;
   margin: auto;
-  mix-blend-mode: lighten;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  align-items: center;
+}
+
+.counterSectionNumbers {
+  color: var(--orange);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+  line-height: 55px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.counterSectionTitle {
   color: var(--white);
+  font-size: 0.9rem;
+  line-height: 27px;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* Choose us Section */
+.chooseUsSection {
+  width: 90%;
+  height: auto;
+  margin: 20px auto;
+}
+
+.chooseUsSectionTitles,
+.servicesSectionTitles {
+  width: 60%;
+  margin: auto;
+}
+
+.chooseUsSectionTitle,
+.serviesSectionTitle {
+  font-size: 1.1rem;
+  text-align: center;
+  line-height: 22px;
+  font-weight: 500;
+  color: var(--red);
+  margin: 0px 0px 8px;
+}
+
+.chooseUsSectionDescription,
+.servicesSectionDescription {
+  color: var(--black);
+  font-family: sans-serif;
+  font-size: 2.2rem;
+  line-height: 50px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.chooseUsCardsParent {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  margin-top: 30px;
+}
+
+.chooseUsCards {
+  width: 100%;
+  padding: 30px;
+}
+
+.chooseUsCardIcon {
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.chooseUsCardTitle {
+  color: var(--black);
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  line-height: 25px;
+  margin: 0px 0px 15px;
+}
+
+.chooseUsCardContent {
+  color: var(--lightGray);
+  font-size: 0.9rem;
+  line-height: 27px;
+  font-weight: 400;
+}
+
+/* Our Services */
+
+.servicesSection {
+  width: 90%;
+  margin: 150px auto;
+}
+
+.serviceCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 20px 0px 50px 0px;
+}
+
+.serviceCard {
+  height: auto;
+  margin-left: 15px;
+  border-radius: 8px;
+  text-align: center;
+  padding: 0px 3px;
+}
+
+.serviceCard:hover .serviceName {
+  color: var(--white);
+}
+
+.serviceCard:hover .serviceDescription {
+  color: var(--white);
+}
+
+.serviceCard:hover .serviceDetailsLink {
+  color: var(--white);
+}
+
+#carWashing,
+#officeCleaning {
+  border: 1px solid var(--orange);
+  transition: background-color 1s;
+}
+
+#carWashing:hover {
+  background-color: var(--orange);
+}
+
+#officeCleaning:hover {
+  background-color: var(--orange);
+}
+
+
+#plumbingService,
+#carpetCleaning {
+  border: 1px solid var(--lightBlue);
+  transition: background-color 1s;
+}
+
+#plumbingService:hover{
+  background-color: var(--veryLightBlue);
+}
+
+#carpetCleaning:hover{
+  background-color: var(--veryLightBlue);
+}
+
+#houseCleaning,
+#windowCleaning{
+  border: 1px solid var(--pink);
+  transition: background-color 1s;
+}
+
+#houseCleaning:hover{
+  background-color: var(--pink);
+}
+
+#windowCleaning:hover{
+  background-color: var(--pink);
+}
+
+.serviceImg {
+  max-width: 90%;
+  display: block;
+  margin: 35px auto;
+}
+
+.serviceName {
+  color: var(--black);
+  font-size: 1.4rem;
+  line-height: 28px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.serviceDescription {
+  color: var(--black);
+  font-size: 0.9rem;
+  line-height: 27px;
+  margin: 8px 0px 12px;
+  padding: 0 5px;
+  font-weight: 400;
+}
+
+.serviceDetails {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.serviceDetailsLink {
+  color: var(--lightBlue);
+  font-size: 0.9rem;
+  line-height: 22px;
+  font-weight: 500;
+  margin-bottom: 15px;
 }
