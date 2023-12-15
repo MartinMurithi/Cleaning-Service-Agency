@@ -27,7 +27,8 @@
             />
           </a>
         </div>
-        <div class="navListContainer">
+        <!-- For pc and laptops -->
+        <div class="navListContainer" id="navListContainer">
           <ul class="navList">
             <li class="navLinkItem"><a href="#">Home</a></li>
             <li class="navLinkItem"><a href="#">About</a></li>
@@ -38,31 +39,65 @@
             </li>
           </ul>
         </div>
+        <!-- For small devices below 760px -->
+        <div class="mobileNavListContainer" id="mobileNavListContainer">
+          <ul class="mobileNavList">
+            <li class="mobileNavLinkItem"><a href="#">Home</a></li>
+            <hr />
+            <li class="mobileNavLinkItem"><a href="#">About</a></li>
+            <hr />
+            <li class="mobileNavLinkItem"><a href="#">Services</a></li>
+            <hr />
+            <li class="mobileNavLinkItem"><a href="#">Contact</a></li>
+            <hr />
+            <li class="mobileNavLinkItem">
+              <a href="#" class="mobileScheduleCall"> Schedule A Call </a>
+            </li>
+          </ul>
+        </div>
+        <div class="menuIconContainer">
+          <img
+            src="./Assets/Icons/icons8-menu-50.png"
+            alt="Menu Icon"
+            width="40px"
+            height="40px"
+            loading="lazy"
+            id="menuIcon"
+          />
+          <img
+            src="./Assets/Icons/icons8-x-48.png"
+            alt="X icon"
+            width="40px"
+            height="40px"
+            loading="lazy"
+            id="xIcon"
+          />
+        </div>
       </div>
     </nav>
 
     <!-- Hero Section -->
     <div class="heroSection">
       <div class="heroSectionText">
-        <h1>
-          Best <span>Cleaning <br /></span> Service Agency<br />
-          In the Country
-        </h1>
+        <div class="heroTitle">
+          <h1 class="heroTitleText">Best <span>Cleaning </span> Service Agency In the Country</h1>
+        </div>
+
         <p class="heroText">
-          Elevate your space with pristine cleanliness. We specialize in <br />
+          Elevate your space with pristine cleanliness. We specialize in
           meticulous cleaning solutions, ensuring a spotless environment
-          <br />tailored to your needs
+          tailored to your needs
         </p>
         <a href="#" class="ctaBtn">Get A Quote</a>
       </div>
-
+      <!-- <div class="floatingImgs">
+        <img src="./Assets/Images/" alt="">
+      </div> -->
       <div class="banner">
         <img
           src="./Assets/Images/banner-main.png"
           alt="Banner Image"
           loading="lazy"
-          width="740px"
-          height="440px"
           class="bannerImg"
         />
       </div>
@@ -73,19 +108,27 @@
       <div class="counterSection">
         <div class="counterSectionText">
           <div class="experience">
-            <p class="counterSectionNumbers">15</p>
+            <p class="counterSectionNumbers" id="counterValue">
+              13+
+            </p>
             <p class="counterSectionTitle">Years Experience</p>
           </div>
           <div class="clients">
-            <p class="counterSectionNumbers">532</p>
+            <p class="counterSectionNumbers" id="counterValue">
+              394
+            </p>
             <p class="counterSectionTitle">Happy Clients</p>
           </div>
           <div class="completeProjects">
-            <p class="counterSectionNumbers">1,187</p>
+            <p class="counterSectionNumbers" id="counterValue">
+              577
+            </p>
             <p class="counterSectionTitle">Projects Completed</p>
           </div>
           <div class="activeProjects">
-            <p class="counterSectionNumbers">31</p>
+            <p class="counterSectionNumbers"  id="counterValue">
+              13
+            </p>
             <p class="counterSectionTitle">Active Projects</p>
           </div>
         </div>
@@ -167,7 +210,7 @@
     <section class="servicesSectionParent">
       <section class="servicesSection">
         <div class="servicesSectionTitles">
-          <p class="serviesSectionTitle">Our Services</p>
+          <p class="servicesSectionTitle">Our Services</p>
           <h2 class="servicesSectionDescription">
             We Are Committed To Give Our Best Services
           </h2>
@@ -376,12 +419,217 @@
                 class="formQuoteInput"
               ></textarea>
               <button type="submit" class="formQuoteBtn">
-                Book A Schedule
+                Book
               </button>
             </div>
           </form>
         </div>
       </section>
+    </div>
+
+    <!-- Reviews Section -->
+    <div class="reviewSectionParent">
+      <h5 class="reviewSectionTitle">Clients Reviews</h5>
+      <h4 class="reviewSectionIntro">What Clients Say About Us</h4>
+      <section class="reviewSection" id="scrollContainer">
+        <!-- Review one -->
+        <div class="reviewCard">
+          <!-- <div class="imgReview"> -->
+          <img
+            src="./Assets/Images/review1.jpg"
+            alt="Review One"
+            width="60px"
+            height="60px"
+            loading="lazy"
+            class="reviewImg"
+          />
+          <!-- </div> -->
+          <section class="reviewText">
+            <p class="review">
+              "Fantastic service! The team from Lixi Cleaning Agency did an
+              exceptional job transforming my home. They were thorough,
+              efficient, and left every corner sparkling clean. I highly
+              recommend their services"
+            </p>
+            <h4 class="reviewerName">Ally Omar</h4>
+          </section>
+        </div>
+        <!-- Review two -->
+        <div class="reviewCard">
+          <!-- <div class="imgReview"> -->
+          <img
+            src="./Assets/Images/review2.jpg"
+            alt="Review One"
+            width="60px"
+            height="60px"
+            loading="lazy"
+            class="reviewImg"
+          />
+          <!-- </div> -->
+          <section class="reviewText">
+            <p class="review">
+              "I've used several cleaning services before, but
+              <b>Lixi Cleaning Agency</b> stands out. The attention to detail is
+              incredible. They not only cleaned but organized as well. It's like
+              coming home to a brand new house every time"
+            </p>
+            <h4 class="reviewerName">Rose M.</h4>
+          </section>
+        </div>
+        <!-- Review three -->
+        <div class="reviewCard">
+          <!-- <div class="imgReview"> -->
+          <img
+            src="./Assets/Images/review3.jpg"
+            alt="Review One"
+            width="60px"
+            height="60px"
+            loading="lazy"
+            class="reviewImg"
+          />
+          <!-- </div> -->
+          <section class="reviewText">
+            <p class="review">
+              "Reliable and professional! Lixi Cleaning Agency consistently
+              delivers top-notch service. The staff is courteous, and they work
+              around my schedule. I appreciate the consistency in quality - a
+              trustworthy choice for sure."
+            </p>
+            <h4 class="reviewerName">Grace K.</h4>
+          </section>
+        </div>
+        <!-- Review four -->
+        <div class="reviewCard">
+          <!-- <div class="imgReview"> -->
+          <img
+            src="./Assets/Images/review5.jpg"
+            alt="Review One"
+            width="60px"
+            height="60px"
+            loading="lazy"
+            class="reviewImg"
+          />
+          <!-- </div> -->
+          <section class="reviewText">
+            <p class="review">
+              "I was skeptical about hiring a cleaning service initially, but
+              Lixi Cleaning Agency exceeded my expectations. They were punctual,
+              friendly, and left my place spotless. The fresh, clean scent
+              lasted for days. Definitely using them again!"
+            </p>
+            <h4 class="reviewerName">Jessica P.</h4>
+          </section>
+        </div>
+        <!-- Review six -->
+        <div class="reviewCard">
+          <!-- <div class="imgReview"> -->
+          <img
+            src="./Assets/Images/review6.jpg"
+            alt="Review One"
+            width="60px"
+            height="60px"
+            loading="lazy"
+            class="reviewImg"
+          />
+          <!-- </div> -->
+          <section class="reviewText">
+            <p class="review">
+              "Impressed by the efficiency! The team from Lixi Cleaning Agency
+              finished the job in record time without compromising on quality.
+              It's evident they take pride in their work. I'm a satisfied
+              customer and will be booking them regularly."
+            </p>
+            <h4 class="reviewerName">Kelly</h4>
+          </section>
+        </div>
+        <!-- Review seven -->
+        <div class="reviewCard">
+          <!-- <div class="imgReview"> -->
+          <img
+            src="./Assets/Images/review7.jpg"
+            alt="Review One"
+            width="60px"
+            height="60px"
+            loading="lazy"
+            class="reviewImg"
+          />
+          <!-- </div> -->
+          <section class="reviewText">
+            <p class="review">
+              "Fantastic service! The team from [Your Cleaning Service Agency]
+              did an exceptional job transforming my home. They were thorough,
+              efficient, and left every corner sparkling clean. I highly
+              recommend their services"
+            </p>
+            <h4 class="reviewerName">Alex</h4>
+          </section>
+        </div>
+        <!-- Review eight -->
+        <div class="reviewCard">
+          <!-- <div class="imgReview"> -->
+          <img
+            src="./Assets/Images/review8.jpg"
+            alt="Review One"
+            width="60px"
+            height="60px"
+            loading="lazy"
+            class="reviewImg"
+          />
+          <!-- </div> -->
+          <section class="reviewText">
+            <p class="review">
+              "Exceptional service at a fair price! Lixi Cleaning Agency
+              provides great value for the money. The team is efficient, and
+              they use high-quality products. It's a relief to have a clean
+              office without breaking the bank. Highly recommended."
+            </p>
+            <h4 class="reviewerName">Jackson</h4>
+          </section>
+        </div>
+        <!-- Review nine -->
+        <div class="reviewCard">
+          <!-- <div class="imgReview"> -->
+          <img
+            src="./Assets/Images/review9.jpg"
+            alt="Review One"
+            width="60px"
+            height="60px"
+            loading="lazy"
+            class="reviewImg"
+          />
+          <!-- </div> -->
+          <section class="reviewText">
+            <p class="review">
+              "I've been using Lixi Cleaning Agency for over a year now, and
+              they consistently deliver outstanding service. The staff is
+              trustworthy, and I feel comfortable having them in my home. It's a
+              relief to have a reliable cleaning service I can count on."
+            </p>
+            <h4 class="reviewerName">Ammy</h4>
+          </section>
+        </div>
+      </section>
+      <!-- Scroll buttons -->
+      <div class="scrollBtns">
+        <img
+          src="./Assets/Icons/left-arrow.png"
+          alt="Left Arrow Icon"
+          loading="lazy"
+          width="50px"
+          height="50px"
+          class="scrollBtn"
+          id="prevBtn"
+        />
+        <img
+          src="./Assets/Icons/right-arrow.png"
+          alt="Right Arrow Icon"
+          loading="lazy"
+          width="50px"
+          height="50px"
+          class="scrollBtn"
+          id="nextBtn"
+        />
+      </div>
     </div>
 
     <!-- Footer -->
@@ -392,9 +640,7 @@
         <img src="./Assets/Images/logo.png" alt="Company Logo" />
         <p class="companyFooterDescription">
           Lixi Cleaning Agency is a professional cleaning agency that not only
-          meets but exceeds your expectations. Experience the difference of a
-          spotless environment with our dedicated team by your side. Your
-          satisfaction is our priority
+          meets but exceeds your expectations.
         </p>
       </div>
 
@@ -467,5 +713,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./index.js"></script>
   </body>
 </html>

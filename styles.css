@@ -10,6 +10,7 @@
   --lightBlue: #3f5165;
   --veryLightBlue: #4a686a;
 }
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -20,10 +21,12 @@ body {
   width: 100%;
   height: 100%;
   font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
 }
 
 a {
   text-decoration: none;
+  color: var(--white);
 }
 
 ul {
@@ -51,7 +54,7 @@ nav {
   font-weight: 500;
 }
 
-li > a {
+a .navLinkItem {
   color: var(--white);
 }
 
@@ -64,6 +67,59 @@ li > a {
   color: var(--white);
 }
 
+.menuIconContainer {
+  display: none;
+}
+
+#xIcon {
+  display: none;
+}
+
+/* Mobile nav */
+.mobileNavListContainer {
+  width: 95%;
+  height: 270px;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  position: absolute;
+  background-color: var(--white);
+  top: 100px;
+  margin: auto;
+  padding: 0 5px;
+}
+
+.mobileNavList li {
+  height: 100%;
+  width: 100%;
+  margin: 6px 0;
+}
+
+.mobileNavLinkItem a {
+  width: 100%;
+  display: block;
+  color: var(--black);
+  padding: 10px 0;
+  font-size: 0.9rem;
+}
+
+a.mobileScheduleCall {
+  background-color: var(--orange);
+  padding: 10px 7px;
+  font-size: 0.8rem;
+  border-radius: 3px;
+  outline: transparent;
+  color: var(--white);
+  width: 21%;
+  text-align: start;
+  margin-top: 13px;
+}
+
+hr {
+  color: var(--black);
+  opacity: 0.4;
+}
+
 /* Hero Section */
 .heroSection {
   width: 90%;
@@ -73,12 +129,16 @@ li > a {
   justify-content: space-between;
 }
 
-h1 {
+.heroTitle {
+  width: 54%;
+}
+
+.heroTitle h1 {
   font-family: "Roboto", sans-serif;
   color: #242424;
-  font-size: 70px;
+  font-size: 4rem;
   line-height: 80px;
-  margin: 0px 0px 1px;
+  margin: 10px;
   text-align: start;
 }
 
@@ -87,6 +147,7 @@ h1 > span {
 }
 
 .heroText {
+  width: 50%;
   color: var(--lightGray);
   line-height: 32px;
   font-size: 1.1rem;
@@ -94,18 +155,25 @@ h1 > span {
   margin-bottom: 40px;
 }
 
-.ctaBtn {
+a.ctaBtn {
   background-color: var(--red);
   font-size: 0.9rem;
   padding: 12px 30px;
   font-weight: 400;
   color: var(--white);
+  text-align: center;
 }
 
 .banner {
   position: absolute;
   right: 10px;
   bottom: -120px;
+}
+
+.bannerImg {
+  max-width: 100%;
+  width: 740px;
+  height: 440px;
 }
 
 /* Counter Area */
@@ -163,7 +231,7 @@ h1 > span {
 }
 
 .chooseUsSectionTitle,
-.serviesSectionTitle {
+.servicesSectionTitle {
   font-size: 1.1rem;
   text-align: center;
   line-height: 22px;
@@ -334,10 +402,13 @@ h1 > span {
 
 .aboutUsSectionParent {
   background-color: var(--veryLightGray);
+  height: auto;
+
 }
 
 .aboutUsSection {
   width: 90%;
+  height: 100%;
   margin: 0px auto 50px auto;
   display: flex;
   justify-content: space-between;
@@ -391,7 +462,7 @@ h1 > span {
   height: auto;
 }
 
-/* Book a quote secion */
+/* Book a quote section */
 
 .quoteSectionParent {
   height: 110vh;
@@ -399,7 +470,6 @@ h1 > span {
   background: url("./Assets/Images/pppp.jpg") no-repeat;
   background-position: center;
   background-size: cover;
-  /* background-color: rgba(5, 5, 5, 0.9); */
   display: flex;
 }
 
@@ -500,17 +570,109 @@ textarea.formQuoteInput::placeholder {
   background-color: var(--black);
 }
 
+/* Review Section */
+
+.reviewSectionParent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 80px auto 10px auto;
+}
+
+.reviewSectionTitle {
+  color: var(--red);
+  font-size: 0.9rem;
+  line-height: 22px;
+  margin: 0px 0px 8px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.reviewSectionIntro {
+  color: var(--black);
+  font-family: sans-serif;
+  font-size: 2.3rem;
+  line-height: 50px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.reviewSection {
+  margin: 5px 15px;
+  /* background-color: red; */
+  height: 70vh;
+  display: flex;
+  gap: 30px;
+  overflow-x: scroll;
+}
+
+.reviewSection::-webkit-scrollbar {
+  display: none;
+}
+
+.reviewCard {
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex: none;
+  margin: 10px auto;
+}
+
+.reviewImg {
+  border-radius: 50%;
+}
+
+.reviewText {
+  margin: 0 5px;
+  text-align: center;
+}
+
+.reviewerName {
+  color: var(--veryLightBlue);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3rem;
+  line-height: 28px;
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+.review {
+  color: var(--lightGray);
+  font-size: 0.9rem;
+  line-height: 27px;
+  font-weight: 400;
+  margin: 2px 3px;
+}
+
+.scrollBtns {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.scrollBtn {
+  background-color: var(--pink);
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+}
+
 /* Footer */
 
 footer {
   background-color: var(--veryLightBlue);
   margin: 100px 0 0 0;
-  height: 50vh;
+  /* height: 50vh; */
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+
 }
 
 .companyFooterDescription {
@@ -521,7 +683,7 @@ footer {
 }
 
 .footerColumn {
-  width: 20%;
+  /* width: 20%; */
   margin: 50px 0px 0px 10px;
 }
 
@@ -536,7 +698,7 @@ footer {
 .supportListItem,
 .location,
 .email,
-.mobile{
+.mobile {
   font-size: 1rem;
   line-height: 22px;
   font-weight: 400;
@@ -544,13 +706,621 @@ footer {
   color: var(--white);
 }
 
-.contactIcons{
+.contactIcons {
   margin: 10px 0;
+}
+
+.socialIcons {
+  background-color: var(--white);
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  /* h1 .heroTitleText {
+    width: 100%;
+    font-size: 90px;
+    text-align: center;
+    color: red;
+  } */
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    width: 100%;
+  }
+
+  .navListContainer {
+    display: none;
+  }
+
+  .menuIconContainer {
+    display: block;
+    cursor: pointer;
+  }
+
+  .xIcon {
+    display: none;
+  }
+
+  /* hero section */
+  .heroSection {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    margin: 100px 0 50px 0;
+  }
+
+  .heroSectionText {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .heroTitle {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 25px;
+  }
+
+  .heroTitle h1.heroTitleText {
+    width: 95%;
+    font-size: 36px;
+    line-height: 49px;
+    text-align: center;
+  }
+
+  .heroText {
+    width: 100%;
+    font-size: 0.9rem;
+    line-height: 28px;
+    text-align: center;
+    margin: 2px 8px 25px 8px;
+  }
+
+  .bannerImg {
+    max-width: 100%;
+    height: 100%;
+  }
+
+  /* Choose Us Section */
+  .chooseUsSection {
+    width: 100%;
+    height: auto;
+    margin: 1px auto;
+  }
+
+  .chooseUsSectionTitles {
+    width: 100%;
+    margin: auto;
+  }
+
+  .chooseUsSectionTitle {
+    font-size: 0.9rem;
+  }
+
+  h2.chooseUsSectionDescription {
+    font-size: 1.1rem;
+    line-height: 22px;
+    margin: 0 3px;
+  }
+
+  .chooseUsCardsParent {
+    width: 100%;
+    display: block;
+    margin-top: 30px;
+  }
+
+  .chooseUsCards {
+    text-align: center;
+  }
+
+  .chooseUsCardTitle {
+    font-size: 1.1rem;
+  }
+
+  .chooseUsCardContent {
+    font-size: 0.9rem;
+  }
+
+  /* Service Section */
+
+  .servicesSection {
+    margin-top: 5px;
+  }
+
+  .servicesSectionTitles {
+    width: 100%;
+    margin: auto;
+  }
+
+  p.servicesSectionTitle {
+    font-size: 0.9rem;
+  }
+
+  h2.servicesSectionDescription {
+    font-size: 1.1rem;
+    line-height: 22px;
+    margin: 0 3px;
+  }
+
+  .serviceCards {
+    display: block;
+    margin: 20px 0px 30px 0px;
+  }
+
+  .serviceCard {
+    margin-top: 20px;
+  }
+
+  .serviceName {
+    font-size: 1.2rem;
+    line-height: 22px;
+  }
+
+  /* About Section */
+
+  div.aboutUsSectionParent {
+    width: 97%;
+    height: 280px;
+    margin-bottom: 200px !important;
+  }
+
+  .aboutUsSection {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .aboutUsText {
+    width: 100%;
+    height: 100%;
+  }
+
+  .aboutUsSectionIntro {
+    font-size: 1.3rem;
+    line-height: 40px;
+  }
+
+  p.aboutUsDescription {
+    font-size: .9rem;
+    margin: 0 5px 20px 5px;
+    text-align: center;
+  }
+
+  .aboutUsLearnMore {
+    background-color: var(--red);
+    font-size: 0.9rem;
+    padding: 8px 20px;
+    font-weight: 400;
+    color: var(--white);
+  }
+
+  .aboutUsImgParent {
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+
+  /* Form Section */
+
+div.quoteSectionParent{
+  height: 130vh;
+  margin-top: 10px;
+}
+
+.formQuoteSection {
+  width: 99%;
+  
+}
+
+.formQuoteSectionTitle {
+  width: 90%;
+  font-size: 1.3rem;
+  line-height: 30px;
+  margin: 20px 2px;
+}
+
+.formQuoteParent {
+  width: 100%;
+  margin: auto;
+}
+
+.formQuote {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.inputParents {
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.leftSide,
+.rightSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+input.formQuoteInput {
+  width: 90%;
+  font-size: .9rem;
+  padding: 18px !important;
+  margin: 0 3px;
+}
+
+textarea.formQuoteInput {
+  width: 90%;
+  margin: auto;
+  font-size: .9rem;
+}
+
+.formQuoteBtn {
+  padding: 16px 5px !important;
+  font-size: .9rem !important;
+  width: 40% !important;
+}
+
+/* Review Section */
+
+.reviewSectionParent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 80px auto 10px auto;
+}
+
+.reviewSectionTitle {
+  color: var(--red);
+  font-size: 0.9rem;
+  line-height: 22px;
+  margin: 0px 0px 8px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.reviewSectionIntro {
+  color: var(--black);
+  font-family: sans-serif;
+  font-size: 1.3rem;
+  line-height: 30px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.reviewSection {
+  margin: 5px 15px;
+  height: 45vh;
+  display: flex;
+  gap: 30px;
+  overflow-x: scroll;
+}
+
+.reviewSection::-webkit-scrollbar {
+  display: none;
+}
+
+.reviewCard {
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex: none;
+  margin: 10px auto;
+}
+
+.reviewImg {
+  border-radius: 50%;
+}
+
+.reviewText {
+  margin: 0 5px;
+  text-align: center;
+}
+
+.reviewerName {
+  color: var(--veryLightBlue);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3rem;
+  line-height: 28px;
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+.review {
+  color: var(--lightGray);
+  font-size: 0.9rem;
+  line-height: 27px;
+  font-weight: 400;
+  margin: 2px 3px;
+}
+
+.scrollBtns {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  ;
+}
+
+.scrollBtn {
+  width: 30px;
+  height: 30px;
+  background-color: var(--pink);
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+}
+
+/* Footer */
+footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;align-items: center;
+  text-align: center;
+}
 
 }
 
-.socialIcons{
-    background-color: var(--white);
-    cursor: pointer;
-    margin: 0 5px;
+@media only screen and (max-width: 1010px) {
+  /* hero section */
+  .heroSection {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    margin: 100px 0 50px 0;
+  }
+
+  .heroSectionText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .heroTitle {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  h1.heroTitleText {
+    font-size: 37px;
+    line-height: 49px;
+    text-align: center;
+    width: 70%;
+    margin: 40px auto 20px auto;
+  }
+
+  .heroText {
+    font-size: 1rem;
+    line-height: 28px;
+    text-align: center;
+  }
+
+  a.ctaBtn {
+    font-size: 0.8rem;
+    padding: 10px 28px;
+    text-align: center;
+  }
+
+  .banner {
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+  .bannerImg {
+    max-width: 100%;
+  }
+
+  /* Counter Section */
+  .counterSectionParent {
+    margin: 100px 0;
+  }
+  .counterSectionText {
+    grid-template-columns: auto auto;
+    align-items: center;
+  }
+
+  .counterSectionNumbers {
+    font-size: 1.9rem;
+  }
+
+  /* Choose Us Section */
+  .chooseUsSection {
+    width: 100%;
+    height: auto;
+    margin: 1px auto;
+  }
+
+  .chooseUsSectionTitles {
+    width: 100%;
+    margin: auto;
+  }
+
+  .chooseUsSectionTitle {
+    font-size: 1rem;
+  }
+
+  h2.chooseUsSectionDescription {
+    font-size: 1.4rem;
+    line-height: 27px;
+    margin: 0 3px;
+  }
+
+  .chooseUsCardsParent {
+    grid-template-columns: 1fr;
+  }
+
+  .chooseUsCards {
+    text-align: center;
+  }
+
+  .chooseUsCardTitle {
+    font-size: 1.2rem;
+  }
+
+  .chooseUsCardContent {
+    font-size: 1rem;
+  }
+
+  /* Services Section */
+
+  .servicesSection {
+    margin: 10px;
+  }
+
+  .servicesSectionTitles {
+    width: 100%;
+    margin: auto;
+  }
+
+  p.servicesSectionTitle {
+    font-size: 1rem;
+  }
+
+  h2.servicesSectionDescription {
+    font-size: 1.4rem;
+    line-height: 24px;
+    margin: 3px;
+  }
+
+  .serviceCards {
+    grid-template-columns: 1fr 1fr;
+    margin: 20px 0px 50px 0px;
+  }
+
+  .serviceName {
+    font-size: 1.3rem;
+    line-height: 27px;
+  }
+
+  /* About Section */
+
+  .aboutUsSectionParent {
+    height: 280px;
+    width: 97%;
+  }
+
+  .aboutUsSection {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .aboutUsText {
+    width: 100%;
+    height: 100%;
+  }
+
+  .aboutUsSectionIntro {
+    font-size: 1.8rem;
+    line-height: 40px;
+  }
+
+  .aboutUsDescription {
+    margin: 0 5px 30px 5px;
+  }
+
+  .aboutUsLearnMore {
+    background-color: var(--red);
+    font-size: 0.9rem;
+    padding: 10px 22px;
+    font-weight: 400;
+    color: var(--white);
+  }
+
+  .aboutUsImgParent {
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+
+    /* Form Section */
+
+.quoteSectionParent{
+  height: 110vh;
+}
+
+.formQuoteSection {
+  width: 99%;
+  
+}
+
+.formQuoteSectionTitle {
+  width: 100%;
+  font-size: 1.8rem;
+  line-height: 38px;
+  margin: 28px 2px;
+}
+
+.formQuoteParent {
+  width: 100%;
+  margin: auto;
+}
+
+.formQuote {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.inputParents {
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  gap: 35px;
+}
+
+.leftSide,
+.rightSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+}
+
+input.formQuoteInput {
+  width: 90%;
+  font-size: 1rem;
+  padding: 25px 7px;
+  margin: 0 3px;
+}
+
+textarea.formQuoteInput {
+  width: 90%;
+  margin: auto;
+  font-size: 1rem;
+  padding: 8px ;
+}
+
+.formQuoteBtn {
+  padding: 23px ;
+  width: 40%;
+  font-size: 1rem;
+}
+
+/* Footer */
+footer{
+  grid-template-columns: repeat(3, 1fr);
+}
 }
