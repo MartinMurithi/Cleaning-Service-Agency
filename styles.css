@@ -77,14 +77,16 @@ a .navLinkItem {
 
 /* Mobile nav */
 .mobileNavListContainer {
-  width: 95%;
+  width: 100%;
   height: 270px;
   display: none;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
-  position: absolute;
+  position: relative;
   background-color: var(--white);
-  top: 100px;
+  top: 100%;
+  right: 28%;
+  z-index: 1;
   margin: auto;
   padding: 0 5px;
 }
@@ -110,8 +112,8 @@ a.mobileScheduleCall {
   border-radius: 3px;
   outline: transparent;
   color: var(--white);
-  width: 21%;
-  text-align: start;
+  width: 60%;
+  text-align: center;
   margin-top: 13px;
 }
 
@@ -1323,4 +1325,12 @@ textarea.formQuoteInput {
 footer{
   grid-template-columns: repeat(3, 1fr);
 }
+}
+
+@media only screen and (min-width: 1245px){
+  .banner {
+      position: absolute;
+      right: 10px;
+      bottom: 50px;
+    }
 }
