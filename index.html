@@ -10,13 +10,14 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script defer src="./index.js"></script>
     <title>Lixi-Cleaning Service Agency</title>
   </head>
   <body>
     <nav>
       <div class="navContainer">
         <div class="logoContainer">
-          <a href="#">
+          <a href="./index.html">
             <img
               src="./Assets/Images//logo.png"
               alt="Logo"
@@ -30,8 +31,8 @@
         <!-- For pc and laptops -->
         <div class="navListContainer" id="navListContainer">
           <ul class="navList">
-            <li class="navLinkItem"><a href="#">Home</a></li>
-            <li class="navLinkItem"><a href="#">About</a></li>
+            <li class="navLinkItem"><a href="./index.html">Home</a></li>
+            <li class="navLinkItem"><a href="./About-Us.html">About</a></li>
             <li class="navLinkItem"><a href="#">Services</a></li>
             <li class="navLinkItem"><a href="#">Contact</a></li>
             <li class="navLinkItem">
@@ -42,9 +43,9 @@
         <!-- For small devices below 760px -->
         <div class="mobileNavListContainer" id="mobileNavListContainer">
           <ul class="mobileNavList">
-            <li class="mobileNavLinkItem"><a href="#">Home</a></li>
+            <li class="mobileNavLinkItem"><a href="./index.html">Home</a></li>
             <hr />
-            <li class="mobileNavLinkItem"><a href="#">About</a></li>
+            <li class="mobileNavLinkItem"><a href="./About-Us.html">About</a></li>
             <hr />
             <li class="mobileNavLinkItem"><a href="#">Services</a></li>
             <hr />
@@ -80,7 +81,9 @@
     <div class="heroSection">
       <div class="heroSectionText">
         <div class="heroTitle">
-          <h1 class="heroTitleText">Best <span>Cleaning </span> Service Agency In the Country</h1>
+          <h1 class="heroTitleText">
+            Best <span>Cleaning </span> Service Agency In the Country
+          </h1>
         </div>
 
         <p class="heroText">
@@ -108,27 +111,19 @@
       <div class="counterSection">
         <div class="counterSectionText">
           <div class="experience">
-            <p class="counterSectionNumbers" id="counterValue">
-              13+
-            </p>
+            <p class="counterSectionNumbers" id="counterValue">13+</p>
             <p class="counterSectionTitle">Years Experience</p>
           </div>
           <div class="clients">
-            <p class="counterSectionNumbers" id="counterValue">
-              394
-            </p>
+            <p class="counterSectionNumbers" id="counterValue">394</p>
             <p class="counterSectionTitle">Happy Clients</p>
           </div>
           <div class="completeProjects">
-            <p class="counterSectionNumbers" id="counterValue">
-              577
-            </p>
+            <p class="counterSectionNumbers" id="counterValue">577</p>
             <p class="counterSectionTitle">Projects Completed</p>
           </div>
           <div class="activeProjects">
-            <p class="counterSectionNumbers"  id="counterValue">
-              13
-            </p>
+            <p class="counterSectionNumbers" id="counterValue">13</p>
             <p class="counterSectionTitle">Active Projects</p>
           </div>
         </div>
@@ -418,9 +413,7 @@
                 placeholder="Your Message"
                 class="formQuoteInput"
               ></textarea>
-              <button type="submit" class="formQuoteBtn">
-                Book
-              </button>
+              <button type="submit" class="formQuoteBtn">Book</button>
             </div>
           </form>
         </div>
@@ -648,7 +641,13 @@
       <div class="footerColumn">
         <h4 class="footerColumnTitle">Company</h4>
         <ul class="footerSupportList">
-          <li class="supportListItem"><a href="" class="faq">About</a></li>
+          <li class="supportListItem">
+            <a href="./index.html" class="faq">Home</a>
+          </li>
+
+          <li class="supportListItem">
+            <a href="./About-Us.html" class="faq">About</a>
+          </li>
           <li class="supportListItem">
             <a href="" class="faq">Services</a>
           </li>
@@ -713,7 +712,5 @@
         </div>
       </div>
     </footer>
-
-    <script src="./index.js"></script>
   </body>
 </html>

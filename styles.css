@@ -405,7 +405,6 @@ a.ctaBtn {
 .aboutUsSectionParent {
   background-color: var(--veryLightGray);
   height: auto;
-
 }
 
 .aboutUsSection {
@@ -669,12 +668,12 @@ textarea.formQuoteInput::placeholder {
 footer {
   background-color: var(--veryLightBlue);
   margin: 100px 0 0 0;
+  padding-bottom: 15px;
   /* height: 50vh; */
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
-
 }
 
 .companyFooterDescription {
@@ -716,6 +715,155 @@ footer {
   background-color: var(--white);
   cursor: pointer;
   margin: 0 5px;
+}
+
+/* About Us Page */
+.aboutUsPageSectionParent {
+  height: auto;
+}
+
+.aboutUsPageSection {
+  width: 90%;
+  height: 100%;
+  margin: 60px auto 50px auto;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.aboutUsPageText {
+  width: 50%;
+  height: 100%;
+}
+
+.aboutUsPageSectionTitle {
+  color: var(--red);
+  font-size: 0.9rem;
+  margin: 15px 0px 8px;
+  font-weight: 600;
+}
+
+.aboutUsPageSectionIntro {
+  color: var(--black);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.3rem;
+  line-height: 50px;
+  font-weight: 700;
+}
+
+.aboutUsPageDescription {
+  color: var(--lightGray);
+  font-size: 0.9rem;
+  line-height: 25px;
+  margin: 0px 0px 30px;
+  font-weight: 400;
+}
+
+.aboutUsPageImgParent {
+  width: 50%;
+  height: 100%;
+}
+
+.aboutUsPageImg {
+  max-width: 100%;
+  height: auto;
+}
+
+.missionVisionSectionParent {
+  width: 90%;
+  margin: 100px auto 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.mission,
+.vision {
+  width: 50%;
+}
+
+.missionTitle,
+.visionTitle {
+  color: var(--red);
+  font-size: 1rem;
+  line-height: 22px;
+  margin: 0px 0px 8px;
+  font-weight: 600;
+  text-align: start;
+}
+
+.missionText,
+.visionText {
+  color: var(--lightGray);
+  font-size: 0.9rem;
+  line-height: 28px;
+  margin: 0px 0px 30px;
+  font-weight: 400;
+}
+
+/* Core values Section */
+.coreValuesSectionParent {
+  /* background-color: red; */
+  width: 90%;
+  margin: 40px auto 10px auto;
+}
+
+.coreValuesTitle {
+  color: var(--red);
+  font-size: 1rem;
+  line-height: 22px;
+  margin: 0px 0px 8px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.coreValuesIntro {
+  color: var(--black);
+  font-family: sans-serif;
+  font-size: 2.2rem;
+  line-height: 45px;
+  font-weight: 700;
+  text-align: center;
+  width: 40%;
+  margin: 15px auto;
+}
+
+.coreValuesCardsParent {
+  /* background-color: red; */
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  margin-top: 30px;
+}
+
+.coreValuesCards {
+  /* background-color: green; */
+  width: 100%;
+  padding: 30px;
+}
+
+.valueIcon {
+  border-radius: 50%;
+  margin-bottom: 8px;
+}
+
+.valueTitle {
+  color: var(--black);
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  line-height: 25px;
+  margin: 0px 0px 15px;
+}
+
+.valueText {
+  color: var(--lightGray);
+  font-size: 0.9rem;
+  line-height: 27px;
+  font-weight: 400;
 }
 
 @media only screen and (max-width: 600px) {
@@ -868,8 +1016,8 @@ footer {
   /* About Section */
 
   div.aboutUsSectionParent {
-    width: 97%;
-    height: 280px;
+    width: 95%;
+    height: 300px;
     margin-bottom: 200px !important;
   }
 
@@ -890,7 +1038,7 @@ footer {
   }
 
   p.aboutUsDescription {
-    font-size: .9rem;
+    font-size: 0.9rem;
     margin: 0 5px 20px 5px;
     text-align: center;
   }
@@ -911,170 +1059,244 @@ footer {
 
   /* Form Section */
 
-div.quoteSectionParent{
-  height: 130vh;
-  margin-top: 10px;
-}
+  div.quoteSectionParent {
+    height: 130vh;
+    margin-top: -10px;
+  }
 
-.formQuoteSection {
-  width: 99%;
-  
-}
+  .formQuoteSection {
+    width: 99%;
+  }
 
-.formQuoteSectionTitle {
-  width: 90%;
-  font-size: 1.3rem;
-  line-height: 30px;
-  margin: 20px 2px;
-}
+  .formQuoteSectionTitle {
+    width: 90%;
+    font-size: 1.3rem;
+    line-height: 30px;
+    margin: 20px 2px;
+  }
 
-.formQuoteParent {
-  width: 100%;
-  margin: auto;
-}
+  .formQuoteParent {
+    width: 100%;
+    margin: auto;
+  }
 
-.formQuote {
-  width: 100%;
-  margin: auto;
-  text-align: center;
-}
+  .formQuote {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
 
-.inputParents {
-  width: 100%;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
-}
+  .inputParents {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
 
-.leftSide,
-.rightSide {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
+  .leftSide,
+  .rightSide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
 
-input.formQuoteInput {
-  width: 90%;
-  font-size: .9rem;
-  padding: 18px !important;
-  margin: 0 3px;
-}
+  input.formQuoteInput {
+    width: 90%;
+    font-size: 0.9rem;
+    padding: 18px !important;
+    margin: 0 3px;
+  }
 
-textarea.formQuoteInput {
-  width: 90%;
-  margin: auto;
-  font-size: .9rem;
-}
+  textarea.formQuoteInput {
+    width: 90%;
+    margin: auto;
+    font-size: 0.9rem;
+  }
 
-.formQuoteBtn {
-  padding: 16px 5px !important;
-  font-size: .9rem !important;
-  width: 40% !important;
-}
+  .formQuoteBtn {
+    padding: 16px 5px !important;
+    font-size: 0.9rem !important;
+    width: 40% !important;
+  }
 
-/* Review Section */
+  /* Review Section */
 
-.reviewSectionParent {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  margin: 80px auto 10px auto;
-}
+  .reviewSectionParent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 80px auto 10px auto;
+  }
 
-.reviewSectionTitle {
-  color: var(--red);
-  font-size: 0.9rem;
-  line-height: 22px;
-  margin: 0px 0px 8px;
-  font-weight: 600;
-  text-align: center;
-}
+  .reviewSectionTitle {
+    color: var(--red);
+    font-size: 0.9rem;
+    line-height: 22px;
+    margin: 0px 0px 8px;
+    font-weight: 600;
+    text-align: center;
+  }
 
-.reviewSectionIntro {
-  color: var(--black);
-  font-family: sans-serif;
-  font-size: 1.3rem;
-  line-height: 30px;
-  font-weight: 700;
-  text-align: center;
-}
+  .reviewSectionIntro {
+    color: var(--black);
+    font-family: sans-serif;
+    font-size: 1.3rem;
+    line-height: 30px;
+    font-weight: 700;
+    text-align: center;
+  }
 
-.reviewSection {
-  margin: 5px 15px;
-  height: 45vh;
-  display: flex;
-  gap: 30px;
-  overflow-x: scroll;
-}
+  .reviewSection {
+    margin: 5px 15px;
+    height: 45vh;
+    display: flex;
+    gap: 30px;
+    overflow-x: scroll;
+  }
 
-.reviewSection::-webkit-scrollbar {
-  display: none;
-}
+  .reviewSection::-webkit-scrollbar {
+    display: none;
+  }
 
-.reviewCard {
-  width: 32%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  flex: none;
-  margin: 10px auto;
-}
+  .reviewCard {
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex: none;
+    margin: 10px auto;
+  }
 
-.reviewImg {
-  border-radius: 50%;
-}
+  .reviewImg {
+    border-radius: 50%;
+  }
 
-.reviewText {
-  margin: 0 5px;
-  text-align: center;
-}
+  .reviewText {
+    margin: 0 5px;
+    text-align: center;
+  }
 
-.reviewerName {
-  color: var(--veryLightBlue);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.3rem;
-  line-height: 28px;
-  margin-top: 8px;
-  font-weight: 600;
-}
+  .reviewerName {
+    color: var(--veryLightBlue);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+    line-height: 28px;
+    margin-top: 8px;
+    font-weight: 600;
+  }
 
-.review {
-  color: var(--lightGray);
-  font-size: 0.9rem;
-  line-height: 27px;
-  font-weight: 400;
-  margin: 2px 3px;
-}
+  .review {
+    color: var(--lightGray);
+    font-size: 0.9rem;
+    line-height: 27px;
+    font-weight: 400;
+    margin: 2px 3px;
+  }
 
-.scrollBtns {
-  display: flex;
-  justify-content: space-between;
-  gap: 50px;
-  ;
-}
+  .scrollBtns {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+  }
 
-.scrollBtn {
-  width: 30px;
-  height: 30px;
-  background-color: var(--pink);
-  border-radius: 50%;
-  padding: 8px;
-  cursor: pointer;
-}
+  .scrollBtn {
+    width: 30px;
+    height: 30px;
+    background-color: var(--pink);
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+  }
 
-/* Footer */
-footer{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;align-items: center;
-  text-align: center;
-}
+  /* Footer */
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* About Us Page */
+  div.aboutUsPageSection {
+    width: 90%;
+    flex-direction: column-reverse;
+    gap: 35px;
+    margin-bottom: -50px;
+  }
+
+  .aboutUsPageSectionIntro {
+    font-family: sans-serif;
+    font-size: 1.4rem;
+    margin: 5px 0;
+  }
+
+  .aboutUsPageDescription {
+    margin: 5px auto;
+  }
+
+  div.missionVisionSectionParent {
+    width: 95%;
+    gap: 5px;
+  }
+
+  .mission,
+  .vision {
+    width: 100%;
+    text-align: start;
+  }
+
+  h3.missionTitle,
+  h3.visionTitle {
+    text-align: start;
+  }
+
+  p.missionText,
+  p.visionText {
+    text-align: start;
+  }
+
+  /* Core values Section */
+  .coreValuesSectionParent {
+    /* background-color: red; */
+    width: 90%;
+    margin: 40px auto 10px auto;
+  }
+
+  .coreValuesTitle {
+    color: var(--red);
+    font-size: 1rem;
+    line-height: 22px;
+    margin: 0px 0px 8px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .coreValuesIntro {
+    font-family: sans-serif;
+    font-size: 1.6rem;
+    line-height: 50px;
+    width: 95%;
+  }
+
+  div.coreValuesCardsParent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  h3.valueTitle {
+    font-size: 1.1rem;
+    line-height: 20px;
+  }
 
 }
 
@@ -1256,81 +1478,193 @@ footer{
     display: none;
   }
 
-    /* Form Section */
+  /* Form Section */
 
-.quoteSectionParent{
-  height: 110vh;
+  .quoteSectionParent {
+    height: 110vh;
+  }
+
+  .formQuoteSection {
+    width: 99%;
+  }
+
+  .formQuoteSectionTitle {
+    width: 100%;
+    font-size: 1.8rem;
+    line-height: 38px;
+    margin: 28px 2px;
+  }
+
+  .formQuoteParent {
+    width: 100%;
+    margin: auto;
+  }
+
+  .formQuote {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .inputParents {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    gap: 35px;
+  }
+
+  .leftSide,
+  .rightSide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+  }
+
+  input.formQuoteInput {
+    width: 90%;
+    font-size: 1rem;
+    padding: 25px 7px;
+    margin: 0 3px;
+  }
+
+  textarea.formQuoteInput {
+    width: 90%;
+    margin: auto;
+    font-size: 1rem;
+    padding: 8px;
+  }
+
+  .formQuoteBtn {
+    padding: 23px;
+    width: 40%;
+    font-size: 1rem;
+  }
+
+  /* Footer */
+  footer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* About Us Page */
+
+  .aboutUsPageSection {
+    /* background-color: red; */
+    width: 95%;
+    flex-direction: row-reverse;
+  }
+
+  .aboutUsPageText {
+    width: 100%;
+  }
+
+  .aboutUsPageSectionTitle {
+    font-size: 0.9rem;
+    margin-top: -4px;
+  }
+
+  .aboutUsPageSectionIntro {
+    font-size: 1.9rem;
+    line-height: 40px;
+  }
+
+  .aboutUsPageDescription {
+    line-height: 23px;
+  }
+
+  .aboutUsPageImgParent {
+    width: 100%;
+    height: 100%;
+    margin-bottom: auto;
+  }
+
+  .aboutUsPageImg {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .missionVisionSectionParent {
+    width: 100%;
+    margin: 100px auto 10px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .mission,
+  .vision {
+    width: 95%;
+  }
+
+  .missionTitle,
+  .visionTitle {
+    text-align: center;
+  }
+
+  .missionText,
+  .visionText {
+    text-align: center;
+  }
+
+  /* Core values Section */
+  .coreValuesSectionParent {
+    width: 95%;
+    margin: 40px auto 10px auto;
+  }
+
+  .coreValuesIntro {
+    color: var(--black);
+    font-family: sans-serif;
+    font-size: 1.9rem;
+    line-height: 35px;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+    margin: 15px auto 5px auto;
+  }
+
+  .coreValuesCardsParent {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+    margin: 10px auto;
+  }
+
+  .coreValuesCards {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .valueIcon {
+    border-radius: 50%;
+    margin-bottom: 8px;
+  }
+
+  .valueTitle {
+    color: var(--black);
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    line-height: 25px;
+    margin: 0px 0px 15px;
+  }
+
+  .valueText {
+    color: var(--lightGray);
+    font-size: 0.9rem;
+    line-height: 27px;
+    font-weight: 400;
+  }
 }
 
-.formQuoteSection {
-  width: 99%;
-  
-}
-
-.formQuoteSectionTitle {
-  width: 100%;
-  font-size: 1.8rem;
-  line-height: 38px;
-  margin: 28px 2px;
-}
-
-.formQuoteParent {
-  width: 100%;
-  margin: auto;
-}
-
-.formQuote {
-  width: 100%;
-  margin: auto;
-  text-align: center;
-}
-
-.inputParents {
-  width: 100%;
-  flex-direction: column;
-  justify-content: center;
-  gap: 35px;
-}
-
-.leftSide,
-.rightSide {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 35px;
-}
-
-input.formQuoteInput {
-  width: 90%;
-  font-size: 1rem;
-  padding: 25px 7px;
-  margin: 0 3px;
-}
-
-textarea.formQuoteInput {
-  width: 90%;
-  margin: auto;
-  font-size: 1rem;
-  padding: 8px ;
-}
-
-.formQuoteBtn {
-  padding: 23px ;
-  width: 40%;
-  font-size: 1rem;
-}
-
-/* Footer */
-footer{
-  grid-template-columns: repeat(3, 1fr);
-}
-}
-
-@media only screen and (min-width: 1245px){
+@media only screen and (min-width: 1245px) {
   .banner {
-      position: absolute;
-      right: 10px;
-      bottom: 50px;
-    }
+    position: absolute;
+    right: 10px;
+    bottom: 50px;
+  }
 }
