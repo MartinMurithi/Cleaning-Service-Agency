@@ -1,11 +1,13 @@
+document.addEventListener("DOMContentLoaded", ()=>{
+
 const scrollContainer = document.getElementById("scrollContainer");
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
 
 const menuIcon = document.getElementById("menuIcon");
 const xIcon = document.getElementById("xIcon");
-const mobileNav = document.getElementById("mobileNavListContainer");
 
+const mobileNav = document.getElementById("mobileNavListContainer");
 // scrollContainer.addEventListener('wheel', (e) => {
 //     e.preventDefault();
 //     scrollContainer.style.scrollBehavior = 'smooth';
@@ -32,6 +34,7 @@ menuIcon.addEventListener("click", () => {
   }, 10);
 });
 
+
 xIcon.addEventListener("click", () => {
   mobileNav.style.opacity = "0";
 
@@ -40,4 +43,6 @@ xIcon.addEventListener("click", () => {
     xIcon.style.display = "none";
     menuIcon.style.display = "block";
   }, 300);
+});
+
 });
