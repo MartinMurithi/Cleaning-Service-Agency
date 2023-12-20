@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <script defer src="./index.js"></script>
     <title>About Us | Lixi Cleaning Service Agency</title>
   </head>
   <body>
@@ -26,8 +27,8 @@
           <ul class="navList">
             <li class="navLinkItem"><a href="./index.html">Home</a></li>
             <li class="navLinkItem"><a href="./About-Us.html">About</a></li>
-            <li class="navLinkItem"><a href="#">Services</a></li>
-            <li class="navLinkItem"><a href="#">Contact</a></li>
+            <li class="navLinkItem"><a href="#servicesSection">Services</a></li>
+            <li class="navLinkItem"><a href="#contactForm">Contact</a></li>
             <li class="navLinkItem">
               <a href="#" class="scheduleCall"> Schedule A Call </a>
             </li>
@@ -38,14 +39,22 @@
           <ul class="mobileNavList">
             <li class="mobileNavLinkItem"><a href="./index.html">Home</a></li>
             <hr />
-            <li class="mobileNavLinkItem"><a href="./About-Us.html">About</a></li>
-            <hr />
-            <li class="mobileNavLinkItem"><a href="#">Services</a></li>
-            <hr />
-            <li class="mobileNavLinkItem"><a href="#">Contact</a></li>
+            <li class="mobileNavLinkItem">
+              <a href="./About-Us.html">About</a>
+            </li>
             <hr />
             <li class="mobileNavLinkItem">
-              <a href="#" class="mobileScheduleCall"> Schedule A Call </a>
+              <a href="#servicesSection">Services</a>
+            </li>
+            <hr />
+            <li class="mobileNavLinkItem">
+              <a href="#contactForm">Contact</a>
+            </li>
+            <hr />
+            <li class="mobileNavLinkItem">
+              <a href="#contactForm" class="mobileScheduleCall">
+                Schedule A Call
+              </a>
             </li>
           </ul>
         </div>
@@ -83,12 +92,12 @@
             safe and healthy environment for you and your loved ones. Our
             committment to excellence is reflected in our thorough disinfection
             process, which goes beyond the surface to target hidden and commonly
-            overlooked areas.We utilize state-of-the-art equipment and disinfectants to ensure the highest standard of
-            cleanliness. Our comprehensive services cover a variety
-            of settings, including homes, offices and
-            commercial spaces. Whether you're looking for a one-time deep
-            cleaning or a recurring maintenance plan, we tailor our services to
-            meet your specific needs.
+            overlooked areas.We utilize state-of-the-art equipment and
+            disinfectants to ensure the highest standard of cleanliness. Our
+            comprehensive services cover a variety of settings, including homes,
+            offices and commercial spaces. Whether you're looking for a one-time
+            deep cleaning or a recurring maintenance plan, we tailor our
+            services to meet your specific needs.
           </p>
         </section>
         <div class="aboutUsPageImgParent">
@@ -247,6 +256,147 @@
         </div>
       </div>
     </div>
+
+    <!-- Our Services Section -->
+    <section class="servicesSectionParent" id="servicesSection">
+      <section class="servicesSection">
+        <div class="servicesSectionTitles">
+          <p class="servicesSectionTitle">Our Services</p>
+          <h2 class="servicesSectionDescription">
+            We Are Committed To Give Our Best Services
+          </h2>
+        </div>
+
+        <section class="serviceCards">
+          <!-- Service one... Car Wash -->
+          <div class="serviceCard" id="carWashing">
+            <img
+              src="./Assets/Images/carwashing-service.webp"
+              alt="Background Banner"
+              loading="lazy"
+              class="serviceImg"
+            />
+            <a href="#" class="serviceName">Car Washing</a>
+            <p class="serviceDescription">
+              Experience the ultimate in car care with our meticulous service.
+              Our team is dedicated to ensuring your vehicle receives the
+              highest standard of attention, leaving it spotless and gleaming.
+              Trust us for a thorough and professional car washing experience
+              that goes beyond expectations.
+            </p>
+            <div class="serviceDetails">
+              <a href="#" class="serviceDetailsLink">Learn More > </a>
+            </div>
+          </div>
+          <!-- Service Two.... Plumbing -->
+          <div class="serviceCard" id="plumbingService">
+            <img
+              src="./Assets/Images/plumbing-service.webp"
+              alt="Plumbing Service Banner"
+              loading="lazy"
+              class="serviceImg"
+            />
+            <a href="#" class="serviceName">Plumbing Service</a>
+            <p class="serviceDescription">
+              Discover unparalleled expertise in our plumbing services, where we
+              prioritize precision and reliability. Our committed team addresses
+              your plumbing needs with efficiency, offering tailored solutions
+              that exceed expectations. Count on us for dependable and
+              professional services
+            </p>
+            <div class="serviceDetails">
+              <a href="#" class="serviceDetailsLink">Learn More > </a>
+            </div>
+          </div>
+
+          <!-- Service three House Cleaning -->
+          <div class="serviceCard" id="houseCleaning">
+            <img
+              src="./Assets/Images/house-cleaning.webp"
+              alt="Background Banner"
+              loading="lazy"
+              class="serviceImg"
+            />
+            <a href="#" class="serviceName">House Cleaning</a>
+            <p class="serviceDescription">
+              Revitalize your vehicle with our expert care. We go beyond the
+              ordinary, ensuring meticulous attention to detail and a sparkling
+              finish. Our team is committed to delivering exceptional service,
+              making your car shine with a renewed brilliance that stands out.
+              Trust us for a car washing experience that exceeds expectations.
+            </p>
+            <div class="serviceDetails">
+              <a href="#" class="serviceDetailsLink">Learn More > </a>
+            </div>
+          </div>
+
+          <!-- Service Four Office Cleaning -->
+          <div class="serviceCard" id="officeCleaning">
+            <img
+              src="./Assets/Images/Office-Cleaning.webp"
+              alt="Background Banner"
+              loading="lazy"
+              class="serviceImg"
+            />
+            <a href="#" class="serviceName">Office Cleaning</a>
+            <p class="serviceDescription">
+              Elevate your workspace with our comprehensive cleaning services.
+              We pride ourselves on meticulous attention to detail, ensuring a
+              pristine and sanitized environment. Our dedicated team is
+              committed to delivering excellence, providing reliable and
+              efficient office cleaning solutions tailored to your needs.
+            </p>
+            <div class="serviceDetails">
+              <a href="#" class="serviceDetailsLink">Learn More > </a>
+            </div>
+          </div>
+
+          <!-- Service five Carpet Cleaning -->
+          <div class="serviceCard" id="carpetCleaning">
+            <img
+              src="./Assets/Images/carpet-cleaning.webp"
+              alt="Background Banner"
+              loading="lazy"
+              class="serviceImg"
+            />
+            <a href="#" class="serviceName">Carpet Cleaning</a>
+            <p class="serviceDescription">
+              Experience a new level of cleanliness with our expert carpet
+              cleaning services. We prioritize your comfort and well-being,
+              ensuring thorough removal of dirt and allergens. Our dedicated
+              team is committed to delivering top-notch service, rejuvenating
+              your carpets and creating a fresh and inviting atmosphere.
+            </p>
+            <div class="serviceDetails">
+              <a href="#" class="serviceDetailsLink">Learn More > </a>
+            </div>
+          </div>
+
+          <!-- Service six Window Cleaning -->
+          <div class="serviceCard" id="windowCleaning">
+            <img
+              src="./Assets/Images/window-cleaning.webp"
+              alt="Background Banner"
+              loading="lazy"
+              class="serviceImg"
+            />
+            <a href="#" class="serviceName">Window Cleaning</a>
+            <p class="serviceDescription">
+              Transform your view with our professional window cleaning
+              services. We pride ourselves on meticulous attention to detail,
+              ensuring streak-free, crystal-clear windows that invite natural
+              light. Our team is committed to delivering excellence, providing
+              reliable and efficient window cleaning solutions tailored to your
+              needs.
+            </p>
+            <div class="serviceDetails">
+              <a href="#" class="serviceDetailsLink">Learn More > </a>
+            </div>
+          </div>
+        </section>
+      </section>
+    </section>
+
     <!-- Footer Section -->
     <footer>
       <!-- Column one ... Logo and description -->
@@ -268,10 +418,10 @@
           </li>
           <li class="supportListItem"><a href="" class="faq">About</a></li>
           <li class="supportListItem">
-            <a href="" class="faq">Services</a>
+            <a href="#servicesSection" class="faq">Services</a>
           </li>
           <li class="supportListItem">
-            <a href="" class="faq">Contact</a>
+            <a href="#contactForm" class="faq">Contact</a>
           </li>
         </ul>
       </div>
@@ -288,7 +438,9 @@
           <li class="supportListItem">
             <a href="" class="faq">Terms & Conditions</a>
           </li>
-          <li class="supportListItem"><a href="" class="faq">Contact</a></li>
+          <li class="supportListItem">
+            <a href="#contactForm" class="faq">Contact</a>
+          </li>
         </ul>
       </div>
 
@@ -331,8 +483,5 @@
         </div>
       </div>
     </footer>
-
-        <script src="./index.js"></script>
-
   </body>
 </html>
