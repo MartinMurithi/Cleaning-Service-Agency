@@ -1,48 +1,45 @@
-document.addEventListener("DOMContentLoaded", ()=>{
+document.addEventListener("DOMContentLoaded", () => {
+  const scrollContainer = document.getElementById("scrollContainer");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
 
-const scrollContainer = document.getElementById("scrollContainer");
-const prevBtn = document.getElementById("prevBtn");
-const nextBtn = document.getElementById("nextBtn");
+  const menuIcon = document.getElementById("menuIcon");
+  const xIcon = document.getElementById("xIcon");
 
-const menuIcon = document.getElementById("menuIcon");
-const xIcon = document.getElementById("xIcon");
+  const mobileNav = document.getElementById("mobileNavListContainer");
 
-const mobileNav = document.getElementById("mobileNavListContainer");
-// scrollContainer.addEventListener('wheel', (e) => {
-//     e.preventDefault();
-//     scrollContainer.style.scrollBehavior = 'smooth';
-//     scrollContainer.scrollLeft += e.deltaY;
-// });
+  // scrollContainer.addEventListener('wheel', (e) => {
+  //     e.preventDefault();
+  //     scrollContainer.style.scrollBehavior = 'smooth';
+  //     scrollContainer.scrollLeft += e.deltaY;
+  // });
 
-nextBtn.addEventListener("click", () => {
-  scrollContainer.style.scrollBehavior = "smooth";
-  scrollContainer.scrollLeft += 900;
-});
+  menuIcon.addEventListener("click", () => {
+    mobileNav.style.display = "block";
+    menuIcon.style.display = "none";
+    xIcon.style.display = "block";
 
-prevBtn.addEventListener("click", () => {
-  scrollContainer.style.scrollBehavior = "smooth";
-  scrollContainer.scrollLeft -= 900;
-});
+    setTimeout(() => {
+      mobileNav.style.opacity = "1";
+    }, 10);
+  });
 
-menuIcon.addEventListener("click", () => {
-  mobileNav.style.display = "block";
-  menuIcon.style.display = "none";
-  xIcon.style.display = "block";
+  xIcon.addEventListener("click", () => {
+    mobileNav.style.opacity = "0";
 
-  setTimeout(() => {
-    mobileNav.style.opacity = "1";
-  }, 10);
-});
+    setTimeout(() => {
+      mobileNav.style.display = "none";
+      xIcon.style.display = "none";
+      menuIcon.style.display = "block";
+    }, 300);
+  });
+  nextBtn.addEventListener("click", () => {
+    scrollContainer.style.scrollBehavior = "smooth";
+    scrollContainer.scrollLeft += 900;
+  });
 
-
-xIcon.addEventListener("click", () => {
-  mobileNav.style.opacity = "0";
-
-  setTimeout(() => {
-    mobileNav.style.display = "none";
-    xIcon.style.display = "none";
-    menuIcon.style.display = "block";
-  }, 300);
-});
-
+  prevBtn.addEventListener("click", () => {
+    scrollContainer.style.scrollBehavior = "smooth";
+    scrollContainer.scrollLeft -= 900;
+  });
 });

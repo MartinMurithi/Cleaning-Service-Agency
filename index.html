@@ -9,9 +9,14 @@
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="shortcut icon"
+      href="./Assets/Icons/logo.webp"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="styles.css" />
     <script defer src="./index.js"></script>
-    <title>Lixi-Cleaning Service Agency</title>
+    <title>Elixir-Cleaning Service Agency</title>
   </head>
   <body>
     <nav>
@@ -19,14 +24,15 @@
         <div class="logoContainer">
           <a href="./index.html">
             <img
-              src="./Assets/Images//logo.png"
+              src="./Assets/Icons/logo.webp"
               alt="Logo"
-              width="100"
-              height="50"
+              width="60"
+              height="55"
               loading="lazy"
               class="logoImg"
             />
           </a>
+          <a href="./index.html"><p class="logoText">Elixir</p></a>
         </div>
         <!-- For pc and laptops -->
         <div class="navListContainer" id="navListContainer">
@@ -45,14 +51,22 @@
           <ul class="mobileNavList">
             <li class="mobileNavLinkItem"><a href="./index.html">Home</a></li>
             <hr />
-            <li class="mobileNavLinkItem"><a href="./About-Us.html">About</a></li>
-            <hr />
-            <li class="mobileNavLinkItem"><a href="#servicesSection">Services</a></li>
-            <hr />
-            <li class="mobileNavLinkItem"><a href="#contactForm">Contact</a></li>
+            <li class="mobileNavLinkItem">
+              <a href="./About-Us.html">About</a>
+            </li>
             <hr />
             <li class="mobileNavLinkItem">
-              <a href="#contactForm" class="mobileScheduleCall"> Schedule A Call </a>
+              <a href="#servicesSection">Services</a>
+            </li>
+            <hr />
+            <li class="mobileNavLinkItem">
+              <a href="#contactForm">Contact</a>
+            </li>
+            <hr />
+            <li class="mobileNavLinkItem">
+              <a href="#contactForm" class="mobileScheduleCall">
+                Schedule A Call
+              </a>
             </li>
           </ul>
         </div>
@@ -91,11 +105,8 @@
           meticulous cleaning solutions, ensuring a spotless environment
           tailored to your needs
         </p>
-        <a href="#" class="ctaBtn">Get A Quote</a>
+        <a href="#contactForm" class="ctaBtn">Get A Quote</a>
       </div>
-      <!-- <div class="floatingImgs">
-        <img src="./Assets/Images/" alt="">
-      </div> -->
       <div class="banner">
         <img
           src="./Assets/Images/banner-main.png"
@@ -228,9 +239,6 @@
               Trust us for a thorough and professional car washing experience
               that goes beyond expectations.
             </p>
-            <div class="serviceDetails">
-              <a href="#" class="serviceDetailsLink">Learn More > </a>
-            </div>
           </div>
           <!-- Service Two.... Plumbing -->
           <div class="serviceCard" id="plumbingService">
@@ -248,9 +256,6 @@
               that exceed expectations. Count on us for dependable and
               professional services
             </p>
-            <div class="serviceDetails">
-              <a href="#" class="serviceDetailsLink">Learn More > </a>
-            </div>
           </div>
 
           <!-- Service three House Cleaning -->
@@ -269,9 +274,6 @@
               making your car shine with a renewed brilliance that stands out.
               Trust us for a car washing experience that exceeds expectations.
             </p>
-            <div class="serviceDetails">
-              <a href="#" class="serviceDetailsLink">Learn More > </a>
-            </div>
           </div>
 
           <!-- Service Four Office Cleaning -->
@@ -290,9 +292,7 @@
               committed to delivering excellence, providing reliable and
               efficient office cleaning solutions tailored to your needs.
             </p>
-            <div class="serviceDetails">
-              <a href="#" class="serviceDetailsLink">Learn More > </a>
-            </div>
+            <div class="serviceDetails"></div>
           </div>
 
           <!-- Service five Carpet Cleaning -->
@@ -311,9 +311,6 @@
               team is committed to delivering top-notch service, rejuvenating
               your carpets and creating a fresh and inviting atmosphere.
             </p>
-            <div class="serviceDetails">
-              <a href="#" class="serviceDetailsLink">Learn More > </a>
-            </div>
           </div>
 
           <!-- Service six Window Cleaning -->
@@ -333,9 +330,6 @@
               reliable and efficient window cleaning solutions tailored to your
               needs.
             </p>
-            <div class="serviceDetails">
-              <a href="#" class="serviceDetailsLink">Learn More > </a>
-            </div>
           </div>
         </section>
       </section>
@@ -348,7 +342,7 @@
           <p class="aboutUsSectionTitle">About Us</p>
           <h4 class="aboutUsSectionIntro">We Are Dedicated To Do Your Work</h4>
           <p class="aboutUsDescription">
-            At Lixi Cleaning Agency, we offer complete disinfection and
+            At Elixir Cleaning Agency, we offer complete disinfection and
             sanitization of your home to remove all harmful bacterial and viral
             germs from all surfaces. Our extensive range of cleaning and
             disinfection services will help you to remove the risk of health
@@ -356,7 +350,7 @@
             carried out by our expert and certified technicians, who have
             experience in working on a range of premise types.
           </p>
-          <a href="#" class="aboutUsLearnMore">Learn More</a>
+          <a href="./About-Us.html" class="aboutUsLearnMore">Learn More</a>
         </section>
         <div class="aboutUsImgParent">
           <img
@@ -413,7 +407,7 @@
                 placeholder="Your Message"
                 class="formQuoteInput"
               ></textarea>
-              <button type="submit" class="formQuoteBtn">Book</button>
+              <button type="button" class="formQuoteBtn">Book</button>
             </div>
           </form>
         </div>
@@ -439,7 +433,7 @@
           <!-- </div> -->
           <section class="reviewText">
             <p class="review">
-              "Fantastic service! The team from Lixi Cleaning Agency did an
+              "Fantastic service! The team from Elixir Cleaning Agency did an
               exceptional job transforming my home. They were thorough,
               efficient, and left every corner sparkling clean. I highly
               recommend their services"
@@ -449,7 +443,6 @@
         </div>
         <!-- Review two -->
         <div class="reviewCard">
-          <!-- <div class="imgReview"> -->
           <img
             src="./Assets/Images/review2.jpg"
             alt="Review One"
@@ -462,16 +455,15 @@
           <section class="reviewText">
             <p class="review">
               "I've used several cleaning services before, but
-              <b>Lixi Cleaning Agency</b> stands out. The attention to detail is
-              incredible. They not only cleaned but organized as well. It's like
-              coming home to a brand new house every time"
+              <b>Elixir Cleaning Agency</b> stands out. The attention to detail
+              is incredible. They not only cleaned but organized as well. It's
+              like coming home to a brand new house every time"
             </p>
             <h4 class="reviewerName">Rose M.</h4>
           </section>
         </div>
         <!-- Review three -->
         <div class="reviewCard">
-          <!-- <div class="imgReview"> -->
           <img
             src="./Assets/Images/review3.jpg"
             alt="Review One"
@@ -483,7 +475,7 @@
           <!-- </div> -->
           <section class="reviewText">
             <p class="review">
-              "Reliable and professional! Lixi Cleaning Agency consistently
+              "Reliable and professional! Elixir Cleaning Agency consistently
               delivers top-notch service. The staff is courteous, and they work
               around my schedule. I appreciate the consistency in quality - a
               trustworthy choice for sure."
@@ -493,7 +485,6 @@
         </div>
         <!-- Review four -->
         <div class="reviewCard">
-          <!-- <div class="imgReview"> -->
           <img
             src="./Assets/Images/review5.jpg"
             alt="Review One"
@@ -506,16 +497,15 @@
           <section class="reviewText">
             <p class="review">
               "I was skeptical about hiring a cleaning service initially, but
-              Lixi Cleaning Agency exceeded my expectations. They were punctual,
-              friendly, and left my place spotless. The fresh, clean scent
-              lasted for days. Definitely using them again!"
+              Elixir Cleaning Agency exceeded my expectations. They were
+              punctual, friendly, and left my place spotless. The fresh, clean
+              scent lasted for days. Definitely using them again!"
             </p>
             <h4 class="reviewerName">Jessica P.</h4>
           </section>
         </div>
         <!-- Review six -->
         <div class="reviewCard">
-          <!-- <div class="imgReview"> -->
           <img
             src="./Assets/Images/review6.jpg"
             alt="Review One"
@@ -527,7 +517,7 @@
           <!-- </div> -->
           <section class="reviewText">
             <p class="review">
-              "Impressed by the efficiency! The team from Lixi Cleaning Agency
+              "Impressed by the efficiency! The team from Elixir Cleaning Agency
               finished the job in record time without compromising on quality.
               It's evident they take pride in their work. I'm a satisfied
               customer and will be booking them regularly."
@@ -537,7 +527,6 @@
         </div>
         <!-- Review seven -->
         <div class="reviewCard">
-          <!-- <div class="imgReview"> -->
           <img
             src="./Assets/Images/review7.jpg"
             alt="Review One"
@@ -549,7 +538,7 @@
           <!-- </div> -->
           <section class="reviewText">
             <p class="review">
-              "Fantastic service! The team from [Your Cleaning Service Agency]
+              "Fantastic service! The team from Elixir Cleaning Service Agency
               did an exceptional job transforming my home. They were thorough,
               efficient, and left every corner sparkling clean. I highly
               recommend their services"
@@ -559,7 +548,6 @@
         </div>
         <!-- Review eight -->
         <div class="reviewCard">
-          <!-- <div class="imgReview"> -->
           <img
             src="./Assets/Images/review8.jpg"
             alt="Review One"
@@ -571,7 +559,7 @@
           <!-- </div> -->
           <section class="reviewText">
             <p class="review">
-              "Exceptional service at a fair price! Lixi Cleaning Agency
+              "Exceptional service at a fair price! Elixir Cleaning Agency
               provides great value for the money. The team is efficient, and
               they use high-quality products. It's a relief to have a clean
               office without breaking the bank. Highly recommended."
@@ -581,7 +569,6 @@
         </div>
         <!-- Review nine -->
         <div class="reviewCard">
-          <!-- <div class="imgReview"> -->
           <img
             src="./Assets/Images/review9.jpg"
             alt="Review One"
@@ -593,7 +580,7 @@
           <!-- </div> -->
           <section class="reviewText">
             <p class="review">
-              "I've been using Lixi Cleaning Agency for over a year now, and
+              "I've been using Elixir Cleaning Agency for over a year now, and
               they consistently deliver outstanding service. The staff is
               trustworthy, and I feel comfortable having them in my home. It's a
               relief to have a reliable cleaning service I can count on."
@@ -630,9 +617,21 @@
       <!-- Column one ... Logo and description -->
 
       <div class="footerColumn">
-        <img src="./Assets/Images/logo.png" alt="Company Logo" />
+        <div class="logoContainer">
+          <a href="./index.html">
+            <img
+              src="./Assets/Icons/logo.webp"
+              alt="Logo"
+              width="60"
+              height="55"
+              loading="lazy"
+              class="logoImg"
+            />
+          </a>
+          <a href="./index.html"><p class="logoText">Elixir</p></a>
+        </div>
         <p class="companyFooterDescription">
-          Lixi Cleaning Agency is a professional cleaning agency that not only
+          Elixir Cleaning Agency is a professional cleaning agency that not only
           meets but exceeds your expectations.
         </p>
       </div>
@@ -660,25 +659,29 @@
       <!-- Column two ... Support -->
       <div class="footerColumn">
         <h4 class="footerColumnTitle">Support</h4>
-        <!-- <hr /> -->
+
         <ul class="footerSupportList">
-          <li class="supportListItem"><a href="./About-Us.html" class="faq">FAQ</a></li>
+          <li class="supportListItem">
+            <a href="./About-Us.html" class="faq">FAQ</a>
+          </li>
           <li class="supportListItem">
             <a href="./About-Us.html" class="faq">Privacy Policy</a>
           </li>
           <li class="supportListItem">
             <a href="" class="faq">Terms & Conditions</a>
           </li>
-          <li class="supportListItem"><a href="#contactForm" class="faq">Contact</a></li>
+          <li class="supportListItem">
+            <a href="#contactForm" class="faq">Contact</a>
+          </li>
         </ul>
       </div>
 
       <!-- Column three ... Contact Info -->
       <div class="footerColumn">
         <h4 class="footerColumnTitle">Contact Info</h4>
-        <!-- <hr /> -->
+
         <p class="location">Location: 3rd Floor, Westlands Building</p>
-        <p class="email">Email: info@lixi.com</p>
+        <p class="email">Email: info@EElixirr.com</p>
         <p class="mobile">+254768402381</p>
         <div class="contactIcons">
           <img

@@ -41,9 +41,21 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 15vh;
+  height: 13vh;
   width: 90%;
   margin: auto;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+a .logoText {
+  font-family: fantasy;
+  font-weight: 700;
 }
 
 .navList {
@@ -85,7 +97,7 @@ a .navLinkItem {
   position: relative;
   background-color: var(--white);
   top: 100%;
-  right: 28%;
+  right: 20%;
   z-index: 1;
   margin: auto;
   padding: 0 5px;
@@ -378,7 +390,7 @@ a.ctaBtn {
 }
 
 .serviceDescription {
-  color: var(--black);
+  color: var(--lightGray);
   font-size: 0.9rem;
   line-height: 27px;
   margin: 8px 0px 12px;
@@ -390,14 +402,6 @@ a.ctaBtn {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.serviceDetailsLink {
-  color: var(--lightBlue);
-  font-size: 0.9rem;
-  line-height: 22px;
-  font-weight: 500;
-  margin-bottom: 15px;
 }
 
 /* About Us Section */
@@ -523,7 +527,7 @@ input.formQuoteInput {
   padding: 15px 0;
   outline: transparent;
   border-style: none;
-  border-radius: 2px;
+  border-radius: 4px;
   font-size: 1rem;
   padding-left: 7px;
 }
@@ -539,7 +543,7 @@ input.formQuoteInput::placeholder {
 textarea.formQuoteInput {
   outline: transparent;
   border-style: none;
-  border-radius: 2px;
+  border-radius: 4px;
   font-size: 1rem;
   padding-left: 7px;
 }
@@ -602,7 +606,6 @@ textarea.formQuoteInput::placeholder {
 
 .reviewSection {
   margin: 5px 15px;
-  /* background-color: red; */
   height: 70vh;
   display: flex;
   gap: 30px;
@@ -669,7 +672,6 @@ footer {
   background-color: var(--veryLightBlue);
   margin: 100px 0 0 0;
   padding-bottom: 15px;
-  /* height: 50vh; */
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -684,7 +686,6 @@ footer {
 }
 
 .footerColumn {
-  /* width: 20%; */
   margin: 50px 0px 0px 10px;
 }
 
@@ -773,7 +774,7 @@ footer {
 
 .missionVisionSectionParent {
   width: 90%;
-  margin: 100px auto 10px auto;
+  margin: 10px auto 10px auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -806,7 +807,6 @@ footer {
 
 /* Core values Section */
 .coreValuesSectionParent {
-  /* background-color: red; */
   width: 90%;
   margin: 40px auto 10px auto;
 }
@@ -832,7 +832,6 @@ footer {
 }
 
 .coreValuesCardsParent {
-  /* background-color: red; */
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -841,7 +840,6 @@ footer {
 }
 
 .coreValuesCards {
-  /* background-color: green; */
   width: 100%;
   padding: 30px;
 }
@@ -864,15 +862,6 @@ footer {
   font-size: 0.9rem;
   line-height: 27px;
   font-weight: 400;
-}
-
-@media only screen and (max-width: 600px) {
-  /* h1 .heroTitleText {
-    width: 100%;
-    font-size: 90px;
-    text-align: center;
-    color: red;
-  } */
 }
 
 @media only screen and (max-width: 768px) {
@@ -919,18 +908,17 @@ footer {
   }
 
   .heroTitle h1.heroTitleText {
-    width: 95%;
-    font-size: 36px;
-    line-height: 49px;
+    width: 100%;
+    font-size: 1.8rem;
+    line-height: 40px;
     text-align: center;
   }
 
-  .heroText {
+  p.heroText {
     width: 100%;
-    font-size: 0.9rem;
+    font-size: .9rem;
     line-height: 28px;
     text-align: center;
-    margin: 2px 8px 25px 8px;
   }
 
   .bannerImg {
@@ -1016,9 +1004,10 @@ footer {
   /* About Section */
 
   div.aboutUsSectionParent {
-    width: 95%;
+    width: 100%;
     height: 300px;
-    margin-bottom: 200px !important;
+    margin: 0 auto 200px auto !important;
+    background-color: var(--white);
   }
 
   .aboutUsSection {
@@ -1039,8 +1028,9 @@ footer {
 
   p.aboutUsDescription {
     font-size: 0.9rem;
-    margin: 0 5px 20px 5px;
+    margin: 8px 8px 20px 8px;
     text-align: center;
+    line-height: 28px;
   }
 
   .aboutUsLearnMore {
@@ -1052,8 +1042,6 @@ footer {
   }
 
   .aboutUsImgParent {
-    width: 100%;
-    height: 100%;
     display: none;
   }
 
@@ -1061,18 +1049,17 @@ footer {
 
   div.quoteSectionParent {
     height: 130vh;
-    margin-top: -10px;
   }
 
   .formQuoteSection {
-    width: 99%;
+    width: 95%;
   }
 
   .formQuoteSectionTitle {
     width: 90%;
-    font-size: 1.3rem;
+    font-size: 1rem;
     line-height: 30px;
-    margin: 20px 2px;
+    margin: 20px 5px;
   }
 
   .formQuoteParent {
@@ -1104,15 +1091,23 @@ footer {
 
   input.formQuoteInput {
     width: 90%;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     padding: 18px !important;
     margin: 0 3px;
+  }
+
+  input.formQuoteInput::placeholder {
+    font-size: 0.8rem;
   }
 
   textarea.formQuoteInput {
     width: 90%;
     margin: auto;
     font-size: 0.9rem;
+  }
+
+  textarea.formQuoteInput::placeholder {
+    font-size: 0.8rem;
   }
 
   .formQuoteBtn {
@@ -1185,7 +1180,7 @@ footer {
   .reviewerName {
     color: var(--veryLightBlue);
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.3rem;
+    font-size: 1rem;
     line-height: 28px;
     margin-top: 8px;
     font-weight: 600;
@@ -1193,7 +1188,7 @@ footer {
 
   .review {
     color: var(--lightGray);
-    font-size: 0.9rem;
+    font-size: .9rem;
     line-height: 27px;
     font-weight: 400;
     margin: 2px 3px;
@@ -1233,7 +1228,7 @@ footer {
 
   .aboutUsPageSectionIntro {
     font-family: sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin: 5px 0;
   }
 
@@ -1264,7 +1259,6 @@ footer {
 
   /* Core values Section */
   .coreValuesSectionParent {
-    /* background-color: red; */
     width: 90%;
     margin: 40px auto 10px auto;
   }
@@ -1278,10 +1272,10 @@ footer {
     text-align: center;
   }
 
-  .coreValuesIntro {
+  h3.coreValuesIntro {
     font-family: sans-serif;
-    font-size: 1.6rem;
-    line-height: 50px;
+    font-size: 1.3rem;
+    line-height: 40px;
     width: 95%;
   }
 
@@ -1297,7 +1291,6 @@ footer {
     font-size: 1.1rem;
     line-height: 20px;
   }
-
 }
 
 @media only screen and (max-width: 1010px) {
@@ -1337,6 +1330,7 @@ footer {
     font-size: 1rem;
     line-height: 28px;
     text-align: center;
+    width: 70%;
   }
 
   a.ctaBtn {
@@ -1409,7 +1403,7 @@ footer {
   /* Services Section */
 
   .servicesSection {
-    margin: 10px;
+    margin: 30px;
   }
 
   .servicesSectionTitles {
@@ -1419,12 +1413,13 @@ footer {
 
   p.servicesSectionTitle {
     font-size: 1rem;
+    margin: 15px 0;
   }
 
   h2.servicesSectionDescription {
     font-size: 1.4rem;
     line-height: 24px;
-    margin: 3px;
+    margin: 5px;
   }
 
   .serviceCards {
@@ -1437,11 +1432,16 @@ footer {
     line-height: 27px;
   }
 
+  .serviceDescription{
+    font-size: .9rem;
+  }
+
   /* About Section */
 
   .aboutUsSectionParent {
-    height: 280px;
-    width: 97%;
+    width: 100%;
+    background-color: var(--white);
+    margin-top: 65px;
   }
 
   .aboutUsSection {
@@ -1458,6 +1458,7 @@ footer {
   .aboutUsSectionIntro {
     font-size: 1.8rem;
     line-height: 40px;
+    margin: 6px 0;
   }
 
   .aboutUsDescription {
@@ -1481,7 +1482,7 @@ footer {
   /* Form Section */
 
   .quoteSectionParent {
-    height: 110vh;
+    height: auto;
   }
 
   .formQuoteSection {
@@ -1492,7 +1493,7 @@ footer {
     width: 100%;
     font-size: 1.8rem;
     line-height: 38px;
-    margin: 28px 2px;
+    margin: 40px 2px;
   }
 
   .formQuoteParent {
@@ -1525,7 +1526,7 @@ footer {
   input.formQuoteInput {
     width: 90%;
     font-size: 1rem;
-    padding: 25px 7px;
+    padding: 20px 7px;
     margin: 0 3px;
   }
 
@@ -1540,6 +1541,7 @@ footer {
     padding: 23px;
     width: 40%;
     font-size: 1rem;
+    margin: 10px auto 50px auto;
   }
 
   /* Footer */
@@ -1550,7 +1552,6 @@ footer {
   /* About Us Page */
 
   .aboutUsPageSection {
-    /* background-color: red; */
     width: 95%;
     flex-direction: row-reverse;
   }
@@ -1570,7 +1571,7 @@ footer {
   }
 
   .aboutUsPageDescription {
-    line-height: 23px;
+    line-height: 30px;
   }
 
   .aboutUsPageImgParent {
@@ -1586,7 +1587,7 @@ footer {
 
   .missionVisionSectionParent {
     width: 100%;
-    margin: 100px auto 10px auto;
+    margin: 80px auto 10px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
