@@ -35,11 +35,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   nextBtn.addEventListener("click", () => {
     scrollContainer.style.scrollBehavior = "smooth";
-    scrollContainer.scrollLeft += 900;
+    scrollContainer.scrollLeft += 300;
   });
 
   prevBtn.addEventListener("click", () => {
     scrollContainer.style.scrollBehavior = "smooth";
-    scrollContainer.scrollLeft -= 900;
+    scrollContainer.scrollLeft -= 300;
   });
 });

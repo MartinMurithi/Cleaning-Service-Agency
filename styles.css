@@ -19,6 +19,7 @@
 
 body {
   width: 100%;
+  max-width: 100%;
   height: 100%;
   font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
@@ -41,7 +42,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 13vh;
+  height: 11vh;
   width: 90%;
   margin: auto;
 }
@@ -51,6 +52,7 @@ nav {
   align-items: center;
   justify-content: center;
   gap: 8px;
+  margin: 10px 0;
 }
 
 a .logoText {
@@ -64,6 +66,7 @@ a .logoText {
   align-items: center;
   gap: 30px;
   font-weight: 500;
+  margin: 10px 0;
 }
 
 a .navLinkItem {
@@ -114,17 +117,17 @@ a .navLinkItem {
   display: block;
   color: var(--black);
   padding: 10px 0;
-  font-size: 0.9rem;
+  font-size: .7rem;
 }
 
 a.mobileScheduleCall {
   background-color: var(--orange);
-  padding: 10px 7px;
-  font-size: 0.8rem;
+  padding: 13px 7px;
+  font-size: .8rem;
   border-radius: 3px;
   outline: transparent;
   color: var(--white);
-  width: 60%;
+  width: 100%;
   text-align: center;
   margin-top: 13px;
 }
@@ -299,6 +302,11 @@ a.ctaBtn {
 
 /* Our Services */
 
+.servicesSectionParent{
+  width: 100%;
+  margin: auto;
+}
+
 .servicesSection {
   width: 90%;
   margin: 120px auto;
@@ -470,7 +478,7 @@ a.ctaBtn {
 /* Book a quote section */
 
 .quoteSectionParent {
-  height: 110vh;
+  height: 100vh;
   margin: 70px 0px 20px 0px;
   background: url("./Assets/Images/pppp.jpg") no-repeat;
   background-position: center;
@@ -579,6 +587,7 @@ textarea.formQuoteInput::placeholder {
 
 .reviewSectionParent {
   width: 100%;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -588,7 +597,7 @@ textarea.formQuoteInput::placeholder {
 
 .reviewSectionTitle {
   color: var(--red);
-  font-size: 0.9rem;
+  font-size: .9rem;
   line-height: 22px;
   margin: 0px 0px 8px;
   font-weight: 600;
@@ -606,10 +615,12 @@ textarea.formQuoteInput::placeholder {
 
 .reviewSection {
   margin: 5px 15px;
+  width: 100%;
   height: 70vh;
   display: flex;
   gap: 30px;
   overflow-x: scroll;
+  scrollbar-width: none;
 }
 
 .reviewSection::-webkit-scrollbar {
@@ -617,7 +628,7 @@ textarea.formQuoteInput::placeholder {
 }
 
 .reviewCard {
-  width: 32%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -647,7 +658,7 @@ textarea.formQuoteInput::placeholder {
 
 .review {
   color: var(--lightGray);
-  font-size: 0.9rem;
+  font-size: .9rem;
   line-height: 27px;
   font-weight: 400;
   margin: 2px 3px;
@@ -866,7 +877,8 @@ footer {
 
 @media only screen and (max-width: 768px) {
   body {
-    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
   }
 
   .navListContainer {
@@ -967,9 +979,17 @@ footer {
   }
 
   /* Service Section */
+.servicesSectionParent{
+  width: 100%;
+  margin: auto;
+}
 
   .servicesSection {
-    margin-top: 5px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .servicesSectionTitles {
@@ -1005,8 +1025,8 @@ footer {
 
   div.aboutUsSectionParent {
     width: 100%;
-    height: 300px;
-    margin: 0 auto 200px auto !important;
+    height: auto;
+    margin: 0 auto 100px auto !important;
     background-color: var(--white);
   }
 
@@ -1027,7 +1047,7 @@ footer {
   }
 
   p.aboutUsDescription {
-    font-size: 0.9rem;
+    font-size: .9rem;
     margin: 8px 8px 20px 8px;
     text-align: center;
     line-height: 28px;
@@ -1120,6 +1140,7 @@ footer {
 
   .reviewSectionParent {
     width: 100%;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1158,7 +1179,7 @@ footer {
   }
 
   .reviewCard {
-    width: 32%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
